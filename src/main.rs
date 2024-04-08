@@ -1,9 +1,18 @@
 use pickledb::{PickleDb, PickleDbDumpPolicy, SerializationMethod};
 use clap::{Args, Parser, Subcommand};
 use std::path::Path;
+use std::fs;
+use std::str::FromStr;
+
+#[macro_use]
+extern crate version;
+
+mod dbman;
+use dbman::dbman::{init_db, search_db};
 
 const VERSION: &str = "0.1.0";
-const DBNAME: &str = "rpackmandb.db";
+const DBNAME: &str = "/system/packages/rpackman/share/rpackman/data/rpackmandb/rpackmandb.db";
+const CUSTOMDBPATH: &str = "/system/packages/rpackman/share/rpackman/data/";
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
@@ -28,9 +37,13 @@ struct Cli {
     ///install script url
     scripturl: Option<String>,
 
+    #[arg(long)]
+    ///Create a new custom DB
+    newdb: Option<String>,
+
     #[arg(short, long)]
-    ///Create a new DB
-    dbnew: bool,
+    ///Use custom DB
+    db: Option<String>,
 
 }
 
@@ -54,7 +67,7 @@ enum InstallType {
 }
 
 fn create_db(db_name: &str) -> PickleDb{
-    let mut new_db = PickleDb::new(
+    let new_db = PickleDb::new(
         db_name,
         PickleDbDumpPolicy::AutoDump,
         SerializationMethod::Json,
@@ -63,7 +76,7 @@ fn create_db(db_name: &str) -> PickleDb{
 }
 
 fn load_db(db_name: &str) -> PickleDb{
-    let mut db = PickleDb::load(
+    let db = PickleDb::load(
         db_name,
         PickleDbDumpPolicy::AutoDump,
         SerializationMethod::Json,
@@ -83,12 +96,36 @@ fn main() {
             println!("Install {:?} {:?} {:?}",cli.name, cli.apversion, source.install)
         },
     }
-    if cli.dbnew {
-        let mut db = create_db(DBNAME);
+    if let Some(dbnew) = cli.newdb.as_deref() {
+        let customdbfullname = create_custom_path(cli.newdb.as_deref().unwrap());  
+        let db = create_db(customdbfullname.as_str());
+    }else if let Some(dbnew) = cli.db.as_deref() {
+        let customdbfullname = to_custom_path(cli.db.as_deref().unwrap());  
+        let db = load_db(customdbfullname.as_str());
     }else{
-        let mut db = load_db(DBNAME);
+        let db = load_db(DBNAME);
     }
     println!("filename {:?} of {:?}",getfilename("https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz"), "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz")
+}
+fn to_custom_path(custom_name: &str) -> String{
+    let path_a = concat_str(CUSTOMDBPATH, custom_name);
+    let path_b = concat_str(path_a.as_str(), "/");
+    let path_c = concat_str(path_b.as_str(), custom_name);
+    let path_d = concat_str(&path_c.as_str(), ".db");
+    return path_d;
+}
+fn create_custom_path(custom_name: &str) -> String{
+    let path_a = concat_str(CUSTOMDBPATH, custom_name);
+    let path_b = concat_str(path_a.as_str(), "/");
+    let path_c = concat_str(path_b.as_str(), custom_name);
+    let path_d = concat_str(&path_c.as_str(), ".db");
+    let ret = create_path(&path_a);
+    if ret.is_ok() {
+        return path_d;
+    }else{
+        let noret: String =  String::from_str("").unwrap();
+        return noret;
+    }
 }
 
 fn getfilename(fullpath: &str) -> &str{
@@ -109,4 +146,9 @@ fn concat_str(a: &str, b: &str) -> String {
 fn concat_string(a: String, b: String) -> String {
     let ret = a + &b;
     return ret;
+}
+
+fn create_path(to_path: &str) -> std::io::Result<()> {
+    fs::create_dir_all(to_path)?;
+    Ok(())
 }
