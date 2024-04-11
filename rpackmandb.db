@@ -1,1 +1,24 @@
-[{},{}]
+{
+    "nano": (
+        fromsource: (
+            name: "nano",
+            version: "7.2",
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/nano/7.2/nano-7.2.sh",
+        ),
+        source: (
+            name: "nano",
+            version: "7.2",
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
+        ),
+        binary: (
+            name: "",
+            version: "",
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+    ),
+}
