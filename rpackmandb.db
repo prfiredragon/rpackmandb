@@ -20,5 +20,6 @@
             maxosver: "",
             maxosbuild: "",
         ),
+        rpackcver: "1.3.2",
     ),
 }
