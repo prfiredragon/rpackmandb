@@ -14,7 +14,7 @@ cd    build &&
 meson setup ..            \
       --prefix=$appath       \
       --buildtype=release \
-      -Dgraphite2=enabled &&
+      -Dgraphite2=disabled &&
 ninja
 
 ninja install
