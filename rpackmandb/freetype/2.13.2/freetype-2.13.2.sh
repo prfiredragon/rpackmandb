@@ -3,6 +3,7 @@ compressfile="./freetype-2.13.2.tar.xz"
 appath="/system/packages/freetype"
 
 cd /tmp
+curl -L https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz -O
 tar -xf $compressfile
 cd $temppath
 
