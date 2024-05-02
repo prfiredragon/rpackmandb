@@ -1,4 +1,25 @@
 {
+    "cracklib2.9.11": (
+        name: "cracklib",
+        version: "2.9.11",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
+        ),
+        source: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
     "nano7.2": (
         name: "nano",
         version: "7.2",
