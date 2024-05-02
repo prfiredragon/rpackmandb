@@ -1,15 +1,36 @@
 {
-    "cracklib2.9.11": (
-        name: "cracklib",
-        version: "2.9.11",
+    "freetype2.13.2": (
+        name: "freetype",
+        version: "2.13.2",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
+            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/freetype/2.13.2/freetype-2.13.2.sh",
         ),
         source: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "harfbuzz8.3.0": (
+        name: "harfbuzz",
+        version: "8.3.0",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+        ),
+        source: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
         ),
         binary: (
             url: "",
@@ -41,17 +62,17 @@
         ),
         deps: [],
     ),
-    "harfbuzz8.3.0": (
-        name: "harfbuzz",
-        version: "8.3.0",
+    "cracklib2.9.11": (
+        name: "cracklib",
+        version: "2.9.11",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
         ),
         source: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
         ),
         binary: (
             url: "",
