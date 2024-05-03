@@ -20,6 +20,6 @@ ninja
 ninja install
 
 
-cd ..
+cd ../../
 rm -rf $temppath
 cd ..
