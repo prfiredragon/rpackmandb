@@ -1,4 +1,25 @@
 {
+    "libevent2.1.12": (
+        name: "libevent",
+        version: "2.1.12",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+        ),
+        source: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
     "freetype2.13.2": (
         name: "freetype",
         version: "2.13.2",
@@ -10,27 +31,6 @@
         ),
         source: (
             url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "harfbuzz8.3.0": (
-        name: "harfbuzz",
-        version: "8.3.0",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
-        ),
-        source: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
         ),
         binary: (
             url: "",
@@ -73,6 +73,27 @@
         ),
         source: (
             url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "harfbuzz8.3.0": (
+        name: "harfbuzz",
+        version: "8.3.0",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+        ),
+        source: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
         ),
         binary: (
             url: "",
