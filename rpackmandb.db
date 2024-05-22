@@ -1,15 +1,36 @@
 {
-    "libevent2.1.12": (
-        name: "libevent",
-        version: "2.1.12",
+    "harfbuzz8.3.0": (
+        name: "harfbuzz",
+        version: "8.3.0",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
         ),
         source: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "libnl3.9.0": (
+        name: "libnl",
+        version: "3.9.0",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libnl/3.9.0/libnl-3.9.0.sh",
+        ),
+        source: (
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
         ),
         binary: (
             url: "",
@@ -83,17 +104,17 @@
         ),
         deps: [],
     ),
-    "harfbuzz8.3.0": (
-        name: "harfbuzz",
-        version: "8.3.0",
+    "libevent2.1.12": (
+        name: "libevent",
+        version: "2.1.12",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
         ),
         source: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
         ),
         binary: (
             url: "",
