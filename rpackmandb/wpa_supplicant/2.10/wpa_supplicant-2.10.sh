@@ -53,6 +53,7 @@ make BINDIR=$appath/sbin LIBDIR=$appath/lib INCDIR=$appath/include
 
 mkdir -pv /system/packages/wpa_supplicant/sbin/
 mkdir -pv /system/packages/wpa_supplicant/share/man/man5/
+mkdir -pv /system/packages/wpa_supplicant/share/man/man8/
 
 install -v -m755 wpa_{cli,passphrase,supplicant} $appath/sbin/ &&
 install -v -m644 doc/docbook/wpa_supplicant.conf.5 $appath/share/man/man5/ &&
