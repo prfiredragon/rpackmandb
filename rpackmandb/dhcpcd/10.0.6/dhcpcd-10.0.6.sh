@@ -21,6 +21,21 @@ make
 
 make install
 
+cat > /system/os/etc/resolv.conf.head << "EOF"
+# OpenDNS servers
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+nameserver 208.67.222.222
+nameserver 208.67.220.220
+EOF
+
+cat > /system/os/etc/resolv.conf << "EOF"
+# OpenDNS servers
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+nameserver 208.67.222.222
+nameserver 208.67.220.220
+EOF
 
 cd ..
 rm -rf $temppath

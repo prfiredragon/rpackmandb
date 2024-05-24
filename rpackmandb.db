@@ -1,15 +1,15 @@
 {
-    "libevent2.1.12": (
-        name: "libevent",
-        version: "2.1.12",
+    "libnl3.9.0": (
+        name: "libnl",
+        version: "3.9.0",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libnl/3.9.0/libnl-3.9.0.sh",
         ),
         source: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
         ),
         binary: (
             url: "",
@@ -41,6 +41,32 @@
         ),
         deps: [],
     ),
+    "iw6.7": (
+        name: "iw",
+        version: "6.7",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/iw/6.7/iw-6.7.sh",
+        ),
+        source: (
+            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [
+            (
+                name: "libnl",
+                version: "3.9.0",
+            ),
+        ],
+    ),
     "dhcpcd10.0.6": (
         name: "dhcpcd",
         version: "10.0.6",
@@ -52,6 +78,99 @@
         ),
         source: (
             url: "https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "cracklib2.9.11": (
+        name: "cracklib",
+        version: "2.9.11",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
+        ),
+        source: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "wpa_supplicant2.10": (
+        name: "wpa_supplicant",
+        version: "2.10",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://w1.fi/releases/wpa_supplicant-2.10.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/wpa_supplicant/2.10/wpa_supplicant-2.10.sh",
+        ),
+        source: (
+            url: "https://w1.fi/releases/wpa_supplicant-2.10.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [
+            (
+                name: "libnl",
+                version: "3.9.0",
+            ),
+            (
+                name: "dbus",
+                version: "1.14.10",
+            ),
+        ],
+    ),
+    "libevent2.1.12": (
+        name: "libevent",
+        version: "2.1.12",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+        ),
+        source: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "dbus1.14.10": (
+        name: "dbus",
+        version: "1.14.10",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/dbus/1.14.10/dbus-1.14.10.sh",
+        ),
+        source: (
+            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
         ),
         binary: (
             url: "",
@@ -94,48 +213,6 @@
         ),
         source: (
             url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "libnl3.9.0": (
-        name: "libnl",
-        version: "3.9.0",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libnl/3.9.0/libnl-3.9.0.sh",
-        ),
-        source: (
-            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "cracklib2.9.11": (
-        name: "cracklib",
-        version: "2.9.11",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
-        ),
-        source: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
         ),
         binary: (
             url: "",
