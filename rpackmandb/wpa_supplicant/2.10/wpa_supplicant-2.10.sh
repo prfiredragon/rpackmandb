@@ -65,6 +65,7 @@ install -v -m644 dbus/dbus-wpa_supplicant.conf \
                  /system/os/etc/dbus-1/system.d/wpa_supplicant.conf
 
 
-cd ..
+cd ../..
 rm -rf $temppath
+rm wpa_supplicant-2.10-security_fix-1.patch
 cd ..
