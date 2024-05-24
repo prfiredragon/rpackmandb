@@ -22,6 +22,8 @@ make
 
 make install
 
+ln -s /system/packages/libnl/lib/libnl*.so /system/os/lib/
+
 
 cd ..
 rm -rf $temppath
