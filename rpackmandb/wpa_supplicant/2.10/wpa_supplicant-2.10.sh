@@ -51,6 +51,8 @@ patch -Np1 -i ../wpa_supplicant-2.10-security_fix-1.patch
 cd wpa_supplicant &&
 make BINDIR=$appath/sbin LIBDIR=$appath/lib INCDIR=$appath/include
 
+mkdir -pv /system/packages/wpa_supplicant/sbin/
+
 install -v -m755 wpa_{cli,passphrase,supplicant} $appath/sbin/ &&
 install -v -m644 doc/docbook/wpa_supplicant.conf.5 $appath/share/man/man5/ &&
 install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 $appath/share/man/man8/
