@@ -1,4 +1,46 @@
 {
+    "libevent2.1.12": (
+        name: "libevent",
+        version: "2.1.12",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+        ),
+        source: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "sudo1.9.15": (
+        name: "sudo",
+        version: "1.9.15",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/sudo/1.9.15/sudo-1.9.15.sh",
+        ),
+        source: (
+            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
     "libnl3.9.0": (
         name: "libnl",
         version: "3.9.0",
@@ -10,95 +52,6 @@
         ),
         source: (
             url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "nano7.2": (
-        name: "nano",
-        version: "7.2",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/nano/7.2/nano-7.2.sh",
-        ),
-        source: (
-            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "iw6.7": (
-        name: "iw",
-        version: "6.7",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/iw/6.7/iw-6.7.sh",
-        ),
-        source: (
-            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [
-            (
-                name: "libnl",
-                version: "3.9.0",
-            ),
-        ],
-    ),
-    "dhcpcd10.0.6": (
-        name: "dhcpcd",
-        version: "10.0.6",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/dhcpcd/10.0.6/dhcpcd-10.0.6.sh",
-        ),
-        source: (
-            url: "https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "cracklib2.9.11": (
-        name: "cracklib",
-        version: "2.9.11",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
-        ),
-        source: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
         ),
         binary: (
             url: "",
@@ -139,17 +92,85 @@
             ),
         ],
     ),
-    "libevent2.1.12": (
-        name: "libevent",
-        version: "2.1.12",
+    "harfbuzz8.3.0": (
+        name: "harfbuzz",
+        version: "8.3.0",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
         ),
         source: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "iw6.7": (
+        name: "iw",
+        version: "6.7",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/iw/6.7/iw-6.7.sh",
+        ),
+        source: (
+            url: "https://www.kernel.org/pub/software/network/iw/iw-6.7.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [
+            (
+                name: "libnl",
+                version: "3.9.0",
+            ),
+        ],
+    ),
+    "cracklib2.9.11": (
+        name: "cracklib",
+        version: "2.9.11",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
+        ),
+        source: (
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "nano7.2": (
+        name: "nano",
+        version: "7.2",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/nano/7.2/nano-7.2.sh",
+        ),
+        source: (
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
         ),
         binary: (
             url: "",
@@ -181,6 +202,27 @@
         ),
         deps: [],
     ),
+    "dhcpcd10.0.6": (
+        name: "dhcpcd",
+        version: "10.0.6",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/dhcpcd/10.0.6/dhcpcd-10.0.6.sh",
+        ),
+        source: (
+            url: "https://github.com/NetworkConfiguration/dhcpcd/releases/download/v10.0.6/dhcpcd-10.0.6.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
     "freetype2.13.2": (
         name: "freetype",
         version: "2.13.2",
@@ -192,27 +234,6 @@
         ),
         source: (
             url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "harfbuzz8.3.0": (
-        name: "harfbuzz",
-        version: "8.3.0",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
-        ),
-        source: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
         ),
         binary: (
             url: "",
