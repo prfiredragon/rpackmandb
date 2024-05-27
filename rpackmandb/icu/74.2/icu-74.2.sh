@@ -16,9 +16,9 @@ make
 
 make install
 
-ln -s /system/packages/icu/lib/*.so /system/os/lib/
-ln -s /system/packages/icu/bin/* /system/os/bin/
-ln -s /system/packages/icu/sbin/* /system/os/sbin/
+#ln -s /system/packages/icu/lib/*.so /system/os/lib/
+#ln -s /system/packages/icu/bin/* /system/os/bin/
+#ln -s /system/packages/icu/sbin/* /system/os/sbin/
 
 cd ../..
 rm -rf $temppath
