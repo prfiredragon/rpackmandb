@@ -55,13 +55,13 @@ export i=$appath
 
                         if [[ "$(/system/packages/coreutils/bin/basename $i)" != "pkgconf" ]]; then
                                 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$i/lib/pkgconfig
-				ln -s $i/lib/pkgconfig/* /system/packges/pkgconf/lib/pkgconfig/
+				ln -s $i/lib/pkgconfig/* /system/packages/pkgconf/lib/pkgconfig/
                         fi
                 fi
                 if [[ -d "$i/lib64/pkgconfig" && ! -L "$i/lib64/pkgconfig" ]]; then
                                 if [[ "$(/system/packages/coreutils/bin/basename $i)" != "pkgconf" ]]; then
                                                 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$i/lib64/pkgconfig
-						ln -s $i/lib/pkgconfig/* /system/packges/pkgconf/lib/pkgconfig/
+						ln -s $i/lib64/pkgconfig/* /system/packages/pkgconf/lib/pkgconfig/
                                 fi
                 fi
                 if [[ -d "$i/include" && ! -L "$i/include" ]]; then
