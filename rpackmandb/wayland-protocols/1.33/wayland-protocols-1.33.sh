@@ -27,7 +27,7 @@ ln -s /system/packages/wayland-protocols/share/wayland-protocols /system/package
 
 
 
-cd ../
+cd ../..
 rm -rf $temppath
 cd ..
 
