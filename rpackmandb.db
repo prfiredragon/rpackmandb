@@ -1,15 +1,41 @@
 {
-    "libevent2.1.12": (
-        name: "libevent",
-        version: "2.1.12",
+    "wayland-protocols1.33": (
+        name: "wayland-protocols",
+        version: "1.33",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+            url: "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.33/downloads/wayland-protocols-1.33.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/wayland-protocols/1.33/wayland-protocols-1.33.sh",
         ),
         source: (
-            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            url: "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.33/downloads/wayland-protocols-1.33.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [
+            (
+                name: "wayland",
+                version: "1.22.0",
+            ),
+        ],
+    ),
+    "freetype2.13.2": (
+        name: "freetype",
+        version: "2.13.2",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/freetype/2.13.2/freetype-2.13.2.sh",
+        ),
+        source: (
+            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
         ),
         binary: (
             url: "",
@@ -20,17 +46,17 @@
         ),
         deps: [],
     ),
-    "sudo1.9.15": (
-        name: "sudo",
-        version: "1.9.15",
+    "cracklib2.9.11": (
+        name: "cracklib",
+        version: "2.9.11",
         url: "",
         description: "",
         fromsource: (
-            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/sudo/1.9.15/sudo-1.9.15.sh",
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
         ),
         source: (
-            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
+            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
         ),
         binary: (
             url: "",
@@ -41,17 +67,17 @@
         ),
         deps: [],
     ),
-    "libnl3.9.0": (
-        name: "libnl",
-        version: "3.9.0",
+    "libxml22.12.5": (
+        name: "libxml2",
+        version: "2.12.5",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libnl/3.9.0/libnl-3.9.0.sh",
+            url: "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.5.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libxml2/2.12.5/libxml2-2.12.5.sh",
         ),
         source: (
-            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
+            url: "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.5.tar.xz",
         ),
         binary: (
             url: "",
@@ -60,7 +86,38 @@
             maxosver: "",
             maxosbuild: "",
         ),
-        deps: [],
+        deps: [
+            (
+                name: "icu",
+                version: "74.2",
+            ),
+        ],
+    ),
+    "wayland1.22.0": (
+        name: "wayland",
+        version: "1.22.0",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/wayland-1.22.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/wayland/1.22.0/wayland-1.22.0.sh",
+        ),
+        source: (
+            url: "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.22.0/downloads/wayland-1.22.0.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [
+            (
+                name: "libxml2",
+                version: "2.12.5",
+            ),
+        ],
     ),
     "wpa_supplicant2.10": (
         name: "wpa_supplicant",
@@ -92,17 +149,59 @@
             ),
         ],
     ),
-    "harfbuzz8.3.0": (
-        name: "harfbuzz",
-        version: "8.3.0",
+    "dbus1.14.10": (
+        name: "dbus",
+        version: "1.14.10",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/dbus/1.14.10/dbus-1.14.10.sh",
         ),
         source: (
-            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "libevent2.1.12": (
+        name: "libevent",
+        version: "2.1.12",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libevent/2.1.12/libevent-2.1.12.sh",
+        ),
+        source: (
+            url: "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "nano7.2": (
+        name: "nano",
+        version: "7.2",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/nano/7.2/nano-7.2.sh",
+        ),
+        source: (
+            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
         ),
         binary: (
             url: "",
@@ -139,59 +238,17 @@
             ),
         ],
     ),
-    "cracklib2.9.11": (
-        name: "cracklib",
-        version: "2.9.11",
+    "sudo1.9.15": (
+        name: "sudo",
+        version: "1.9.15",
         url: "",
         description: "",
         fromsource: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/cracklib/2.9.11/cracklib-2.9.11.sh",
+            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/sudo/1.9.15/sudo-1.9.15.sh",
         ),
         source: (
-            url: "https://github.com/cracklib/cracklib/releases/download/v2.9.11/cracklib-2.9.11.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "nano7.2": (
-        name: "nano",
-        version: "7.2",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/nano/7.2/nano-7.2.sh",
-        ),
-        source: (
-            url: "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz",
-        ),
-        binary: (
-            url: "",
-            osver: "",
-            osbuild: "",
-            maxosver: "",
-            maxosbuild: "",
-        ),
-        deps: [],
-    ),
-    "dbus1.14.10": (
-        name: "dbus",
-        version: "1.14.10",
-        url: "",
-        description: "",
-        fromsource: (
-            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/dbus/1.14.10/dbus-1.14.10.sh",
-        ),
-        source: (
-            url: "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+            url: "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz",
         ),
         binary: (
             url: "",
@@ -223,17 +280,59 @@
         ),
         deps: [],
     ),
-    "freetype2.13.2": (
-        name: "freetype",
-        version: "2.13.2",
+    "libnl3.9.0": (
+        name: "libnl",
+        version: "3.9.0",
         url: "",
         description: "",
         fromsource: (
-            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
-            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/freetype/2.13.2/freetype-2.13.2.sh",
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/libnl/3.9.0/libnl-3.9.0.sh",
         ),
         source: (
-            url: "https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz",
+            url: "https://github.com/thom311/libnl/releases/download/libnl3_9_0/libnl-3.9.0.tar.gz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "harfbuzz8.3.0": (
+        name: "harfbuzz",
+        version: "8.3.0",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/harfbuzz/8.3.0/harfbuzz-8.3.0.sh",
+        ),
+        source: (
+            url: "https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz",
+        ),
+        binary: (
+            url: "",
+            osver: "",
+            osbuild: "",
+            maxosver: "",
+            maxosbuild: "",
+        ),
+        deps: [],
+    ),
+    "icu74.2": (
+        name: "icu",
+        version: "74.2",
+        url: "",
+        description: "",
+        fromsource: (
+            url: "https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.tgz",
+            script: "https://raw.githubusercontent.com/prfiredragon/rpackmandb/main/rpackmandb/icu/74.2/icu-74.2.sh",
+        ),
+        source: (
+            url: "https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.tgz",
         ),
         binary: (
             url: "",
