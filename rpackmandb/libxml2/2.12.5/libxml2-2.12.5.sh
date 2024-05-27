@@ -28,7 +28,7 @@ cd ../
 rm -rf $temppath
 cd ..
 
-i = $appath
+i=$appath
 
         if [[ -d "$i" && ! -L "$i" ]]; then
                 if [[ -d "$i/bin" && ! -L "$i/bin" ]]; then
